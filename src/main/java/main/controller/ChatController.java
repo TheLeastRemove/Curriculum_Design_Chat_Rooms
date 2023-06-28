@@ -1,8 +1,8 @@
-package me.amarpandey.controller;
+package main.controller;
 
-import me.amarpandey.model.ApplicationStats;
-import me.amarpandey.model.Message;
-import me.amarpandey.utils.ApplicationUtils;
+import main.model.ApplicationStats;
+import main.model.Message;
+import main.utils.ApplicationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;

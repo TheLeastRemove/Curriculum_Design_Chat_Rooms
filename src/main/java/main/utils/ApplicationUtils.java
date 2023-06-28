@@ -1,4 +1,4 @@
-package me.amarpandey.utils;
+package main.utils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,6 +1,6 @@
-package me.amarpandey;
+package main;
 
-import me.amarpandey.model.ApplicationStats;
+import main.model.ApplicationStats;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 

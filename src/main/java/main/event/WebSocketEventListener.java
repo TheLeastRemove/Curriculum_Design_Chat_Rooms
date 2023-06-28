@@ -1,8 +1,8 @@
-package me.amarpandey.event;
+package main.event;
 
-import me.amarpandey.model.ApplicationStats;
-import me.amarpandey.model.Message;
-import me.amarpandey.utils.Constants;
+import main.model.ApplicationStats;
+import main.model.Message;
+import main.utils.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

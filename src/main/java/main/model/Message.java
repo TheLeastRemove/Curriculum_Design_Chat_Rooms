@@ -1,4 +1,4 @@
-package me.amarpandey.model;
+package main.model;
 
 public class Message {
 

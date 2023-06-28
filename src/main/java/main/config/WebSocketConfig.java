@@ -1,4 +1,4 @@
-package me.amarpandey.config;
+package main.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
