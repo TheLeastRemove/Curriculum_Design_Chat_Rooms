@@ -162,7 +162,6 @@ footer {
 #userinfo .name-info {
 	display: inline-block;
 	padding: .75rem;
-	background-color: #007bff;
 	color: #fff;
 	border-radius: 25px;
 	padding-top: 5px;
@@ -170,6 +169,15 @@ footer {
 	margin-top: 2px;
 	margin-bottom: 2px;
 }
+
+.name-info.self {
+	background-color: green;
+}
+
+.name-info.other {
+	background-color: red;
+}
+
 
 footer {
 	height: 100px;
@@ -204,3 +212,11 @@ footer {
 		width: 100%
 	}
 }
+
+/*.transparent-button {*/
+/*	background-color: white;*/
+/*	border: white;*/
+/*	color: white;*/
+/*	text-shadow: white;*/
+/*}*/
+

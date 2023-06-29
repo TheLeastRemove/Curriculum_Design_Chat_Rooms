@@ -1,0 +1,25 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype polyline
+
+class node1 as "bootstrap-toggle.min.css"
+class node8 as "bootstrap-toggle.min.js"
+class node5 as "bootstrap.min.css"
+class node3 as "css/main.css"
+class node0 as "jquery.min.js"
+class node2 as "js/app.js"
+class node6 as "sockjs.min.js"
+class node4 as "static/index.html"
+class node7 as "stomp.min.js"
+
+node4  <-[#595959,plain]-  node1
+node4  <-[#595959,plain]-  node8
+node4  <-[#595959,plain]-  node5
+node4  <-[#595959,plain]-  node3
+node4  <-[#595959,plain]-  node0
+node4  <-[#595959,plain]-  node2
+node4  <-[#595959,plain]-  node6
+node4  <-[#595959,plain]-  node7
+@enduml

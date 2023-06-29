@@ -1,0 +1,89 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class ApplicationStats {
+  - userCount: int
+   userCount: int
+  + incrementUserCount(): void
+  + decrementUserCount(): void
+  - ApplicationStats():
+}
+class ApplicationStatsTest {
+  + test_incrementUserCount(): void
+  + ApplicationStatsTest():
+}
+class ApplicationUtils {
+   time: String
+  + ApplicationUtils():
+}
+class Builder {
+  + atTime(String): Builder
+  + ofType(Type): Builder
+  + build(): Message
+  + Builder(String, String):
+}
+class ChatController {
+  + addUser(Message, SimpMessageHeaderAccessor): Message
+  + sendMessage(Message): Message
+  + sendAdhocMessage(): void
+  + ChatController():
+}
+class ChatRoomsApplication {
+  + main(String[]): void
+  + ChatRoomsApplication():
+}
+class Constants {
+  + Constants():
+}
+class Message {
+  - text: String
+  - time: String
+  - type: Type
+  - user: String
+   text: String
+   time: String
+   type: Type
+   user: String
+  + Message(Builder):
+  + Message():
+}
+class SchedulerConfig {
+  + SchedulerConfig():
+}
+enum Type << enumeration >> {
+  + valueOf(String): Type
+  + values(): Type[]
+  + Type():
+}
+class WebSocketConfig {
+  + registerStompEndpoints(StompEndpointRegistry): void
+  + configureMessageBroker(MessageBrokerRegistry): void
+  + WebSocketConfig():
+}
+class WebSocketEventListener {
+  + handleWebSocketConnectListener(SessionConnectedEvent): void
+  + handleWebSocketDisconnectListener(SessionDisconnectEvent): void
+  + WebSocketEventListener():
+}
+
+ApplicationStatsTest    -[#595959,dashed]->  ApplicationStats
+Builder                 -[#595959,dashed]->  Builder
+Builder                 +-[#820000,plain]-  Message
+Builder                 -[#595959,dashed]->  Message                : "«create»"
+Builder                "1" *-[#595959,plain]-> "type\n1" Type
+ChatController          -[#595959,dashed]->  ApplicationStats
+ChatController          -[#595959,dashed]->  ApplicationUtils
+ChatController          -[#595959,dashed]->  Message
+ChatRoomsApplication    -[#595959,dashed]->  ChatRoomsApplication
+Message                 -[#595959,dashed]->  Builder
+Message                "1" *-[#595959,plain]-> "type\n1" Type
+Type                    +-[#820000,plain]-  Message
+WebSocketEventListener  -[#595959,dashed]->  ApplicationStats
+WebSocketEventListener  -[#595959,dashed]->  Builder                : "«create»"
+WebSocketEventListener  -[#595959,dashed]->  Constants
+WebSocketEventListener  -[#595959,dashed]->  Message
+WebSocketEventListener  -[#595959,dashed]->  WebSocketEventListener
+@enduml

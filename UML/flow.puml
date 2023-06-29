@@ -1,0 +1,16 @@
+@startuml
+
+start
+- "userCount"
+- "incrementUserCount"
+- "decrementUserCount"
+- "addUser"
+- "sendMessage"
+- "sendAdhocMessage"
+- "registerStompEndpoints"
+- "configureMessageBroker"
+- "handleWebSocketConnectListener"
+- "handleWebSocketDisconnectListener"
+- end
+
+@enduml
